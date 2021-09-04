@@ -173,7 +173,7 @@ elseif($type == 'Ex')
 							   <td><?php echo $dept['Dept_OverView'];?></td>
 							   <td><?php echo $dept['Dept_Description'];?></td>
                               <td><a href="departmentedit.php?id=<?php echo $dept['Dept_ID'];?>&type=<?php echo $type;?>">Edit</a>
-								<a href="departmentdelete.php?id=<?php $dept['Dept_ID']; ?> &type=<?php echo $type;?>" onclick="return myFunction()">Delete</a>
+								<a href="departmentdelete.php?id=<?php echo $dept['Dept_ID']; ?> &type=<?php echo $type;?>" onclick="return myFunction()">Delete</a>
 								</td>
 							</tr>
 

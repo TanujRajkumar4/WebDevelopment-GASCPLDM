@@ -1,16 +1,19 @@
 <?php
-include 'db.php';
+include '../dbConnect.php';
 $type=$_GET['type'];
-$sql="DELETE FROM eve WHERE news_id='$_GET[id]'";
-if(mysqli_query($con,$sql))
+$dept_id = $_GET['id'];
+$query="DELETE FROM department WHERE Dept_ID='$dept_id'";
+$result = $db->exec($query);
+echo $result;
+if($result)
 
 {
-	echo "<script>alert('Record Deleted Successfully');
-    window.location.href = 'news.php?type=".$type."';</script>";
+	echo "<script>alert('Department Deleted Successfully');
+    window.location.href = 'department.php?type=".$type."';</script>".$_GET['id'];
 }
 else{
-echo "<script>alert('Error in Deleting the record');
-    window.location.href = 'news.php?type=".$type."';</script>";
+echo "<script>alert('Error in Deleting the Department');
+    window.location.href = 'department.php?type=".$type."';</script>";
 }
 
 

@@ -1,5 +1,5 @@
 <?php
-include("./dbConnect.php");
+include("../dbConnect.php");
 $type=$_GET['type'];
 $Name=addslashes($_POST['Name']);
 $Overview=$_POST['Overview'];
