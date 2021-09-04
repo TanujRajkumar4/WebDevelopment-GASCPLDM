@@ -1,0 +1,112 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.6
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Aug 14, 2015 at 01:18 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `nik`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `eve`
+--
+
+CREATE TABLE `eve` (
+  `news_id` int(11) NOT NULL auto_increment,
+  `news_date` date default NULL,
+  `news_title` varchar(250) default NULL,
+  `news_desc` longtext,
+  `news_photo` varchar(1000) default NULL,
+  `place` varchar(250) default NULL,
+  `eve_date` date default NULL,
+  `map` varchar(1000) NOT NULL,
+  `progm` longtext NOT NULL,
+  `type` varchar(100) NOT NULL,
+  PRIMARY KEY  (`news_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `eve`
+--
+
+INSERT INTO `eve` (`news_id`, `news_date`, `news_title`, `news_desc`, `news_photo`, `place`, `eve_date`, `map`, `progm`, `type`) VALUES
+(3, '2015-08-08', 'sample eve', 'fgds dsg dfg dsfg dsfg fdsg dsgf dsf xzcvwe vx vb wer vzxcxv er g xv gsfg cvxcvzxbgdsh dsfg sdw rgdd bvxbxvbcvbfghdc xds       sdfgsdfg ', 'events/autumn.jpg', 'Coimbatore', '2015-08-08', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15667.025801874863!2d76.99768845!3d10.981747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859f09794996f%3A0x5a507db39d228b85!2sNanjundapuram%2C+Coimbatore%2C+Tamil+Nadu!5e0!3m2!1sen!2sin!4v1439553460140" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>', 'fgds dsg dfg dsfg dsfg fdsg dsgf dsf xzcvwe vx vb wer vzxcxv er g xv gsfg cvxcvzxbgdsh dsfg sdw rgdd bvxbxvbcvbfghdc xds       sdfgsdfg ', 'E'),
+(4, '2015-08-19', 'Sample Event111', '&nbsp;s afgfasgasg', ',../excursion/1439536183sc.jpg,../excursion/1439536183sc.jpg', NULL, NULL, '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15667.025801874863!2d76.99768845!3d10.981747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859f09794996f%3A0x5a507db39d228b85!2sNanjundapuram%2C+Coimbatore%2C+Tamil+Nadu!5e0!3m2!1sen!2sin!4v1439553460140" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>', '', ''),
+(7, '0000-00-00', '100% Result', '100% result result result', ',../news/1439549964sc.jpg,../news/14395499641sc.jpg,../news/14395499642sc.jpg', '', NULL, 'https://www.google.co.in/maps/place/Nanjundapuram,+Coimbatore,+Tamil+Nadu/@10.981747,76.9976884,15z/data=!3m1!4b1!4m2!3m1!1s0x3ba859f09794996f:0x5a507db39d228b85?hl=en', '', 'N'),
+(6, '2015-07-28', 'Sample Event111', 'asg ag afg asgasfgasfgafgfag ag ', ',../Excursion/1439541998sc.jpg,../Excursion/14395419981sc.jpg,../Excursion/14395419982sc.jpg', 'Palladam', NULL, '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15667.025801874863!2d76.99768845!3d10.981747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859f09794996f%3A0x5a507db39d228b85!2sNanjundapuram%2C+Coimbatore%2C+Tamil+Nadu!5e0!3m2!1sen!2sin!4v1439553460140" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>', 'dfga afg asfg asg adf gfa gag as gasgasg afg', 'Ex');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `photo_id` int(11) NOT NULL auto_increment,
+  `photo_title` varchar(100) default NULL,
+  `gallery` varchar(1000) NOT NULL,
+  PRIMARY KEY  (`photo_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`photo_id`, `photo_title`, `gallery`) VALUES
+(2, 'Sample Gallery', ',../imges/1439548221sc.jpg,../imges/14395482211sc.jpg,../imges/14395482212sc.jpg'),
+(6, 'Sample Gallery2', ',../imges/1439548682sc.jpg,../imges/14395486821sc.jpg,../imges/14395486822sc.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pages`
+--
+
+CREATE TABLE `pages` (
+  `page_id` int(11) NOT NULL auto_increment,
+  `page_name` varchar(50) default NULL,
+  `page_content` longtext,
+  `seo_friendly_url` varchar(50) default NULL,
+  `parent_id` int(11) default NULL,
+  `post_date` date default NULL,
+  PRIMARY KEY  (`page_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`page_id`, `page_name`, `page_content`, `seo_friendly_url`, `parent_id`, `post_date`) VALUES
+(1, 'About', '<p>கடந்த<span style="line-height: 1.42857143;">1986</span>ம்&nbsp;ஆண்டு Nanjundapuram<span style="line-height: 1.42857143;">&nbsp;&nbsp;</span><span style="line-height: 1.42857143;">உள்ள&nbsp;</span>எங்கள் இல்லத்தில்&nbsp;என்&nbsp;<span style="line-height: 1.42857143;">குடும்பத்தி</span><span style="line-height: 1.42857143;">ன</span><span style="line-height: 1.42857143;">ர்</span><span style="line-height: 1.42857143;">க</span><span style="line-height: 1.42857143;">ள</span><span style="line-height: 1.42857143;">ல்</span><span style="line-height: 1.42857143;">&nbsp;</span><span style="line-height: 1.42857143;">மூன்று&nbsp;மாணவ,&nbsp;</span>மாணவி</p>', 'about', 1, '2014-12-13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `test_admin`
+--
+
+CREATE TABLE `test_admin` (
+  `admin_id` int(11) NOT NULL auto_increment,
+  `admin_user` varchar(30) default NULL,
+  `admin_pass` varchar(30) default NULL,
+  `admin_email` varchar(50) default NULL,
+  `user_site_title` varchar(200) default NULL,
+  `admin_site_title` varchar(200) default NULL,
+  `admin_domain_url` varchar(250) default NULL,
+  PRIMARY KEY  (`admin_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `test_admin`
+--
+
+INSERT INTO `test_admin` (`admin_id`, `admin_user`, `admin_pass`, `admin_email`, `user_site_title`, `admin_site_title`, `admin_domain_url`) VALUES
+(1, 'admin', 'admin', 'test@test.com', 'Admin Panel - NIK Tuition', 'Admin Panel - NIK Tuition', NULL);
