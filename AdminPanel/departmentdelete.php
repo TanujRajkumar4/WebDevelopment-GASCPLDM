@@ -1,19 +1,25 @@
 <?php
 include '../dbConnect.php';
-$type=$_GET['type'];
-$dept_id = $_GET['id'];
-$query="DELETE FROM department WHERE Dept_ID='$dept_id'";
-$result = $db->exec($query);
-echo $result;
-if($result)
 
-{
-	echo "<script>alert('Department Deleted Successfully');
-    window.location.href = 'department.php?type=".$type."';</script>".$_GET['id'];
+$dept_id = $_GET['id'];
+$result="";
+try{
+
+    $query="DELETE FROM department WHERE Dept_ID='$dept_id'";
+    $result = $db->exec($query);
+    echo $result;
 }
-else{
-echo "<script>alert('Error in Deleting the Department');
-    window.location.href = 'department.php?type=".$type."';</script>";
+catch(Exception $e){
+    //echo "<script>alert('$e->getMessage()')</script>";    
+        echo "<script>alert('Error in Deleting the Department... Please note that a Department cannot be deleted if any courses or faculty are associated with the department. Please delete them before deleting the department.');
+        window.location.href = 'department.php';</script>";
+        
+    
+}
+if($result)
+{
+    echo "<script>alert('Department Deleted Successfully');
+    window.location.href = 'department.php';</script>";
 }
 
 

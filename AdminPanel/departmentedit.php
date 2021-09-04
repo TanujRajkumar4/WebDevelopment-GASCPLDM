@@ -4,21 +4,10 @@ if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }
 include("header.php");
-$type=$_GET['type'];
+include('./dbConnect.php');
 $dept_id=$_GET['id'];
+$title="Department";
 
-if($type == 'N')
-{
-	$title="Department";
-}
-elseif($type == 'E')
-{
-	$title="Events";
-}
-elseif($type == 'Ex')
-{
-	$title="Excursion";
-}
 ?>
 
 	<div class="page-content-wrapper">
@@ -65,7 +54,7 @@ elseif($type == 'Ex')
 						</div>
 						<?php
   
-   include './dbConnect.php';
+ 
   $query = "SELECT * FROM department WHERE Dept_ID LIKE '$dept_id';";
    $results = $db->query($query);
    $results = $results->fetch();
@@ -74,7 +63,7 @@ elseif($type == 'Ex')
 
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="newsedit2.php?id=<?php echo $results['Dept_ID']?>&type=<?php echo $type;?>"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
+							<form action="departmentedit2.php?id=<?php echo $results['Dept_ID']?>"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
 								
                                 <div class="col-md-12" style="background:#fff;">
                                 <div class="form-body">                               
@@ -83,7 +72,7 @@ elseif($type == 'Ex')
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<input type="text" id="Header" name="header" required data-required="1" class="form-control" value="<?php echo $results['Dept_Name'];?>">
+											<input type="text" id="Name" name="Name" required data-required="1" class="form-control" value="<?php echo $results['Dept_Name'];?>">
 										</div>
 									</div>
 									
@@ -112,7 +101,7 @@ elseif($type == 'Ex')
 									<div class="row">
 										<div class="col-md-offset-3 col-md-9">
 											<button type="submit" class="btn green">Update</button>
-											<button type="button" class="btn default" onclick="window.location.href='./department.php?type=N'">Cancel</button>
+											<button type="button" class="btn default" onclick="window.location.href='./department.php'">Cancel</button>
 										</div>
 									</div>
 								</div>

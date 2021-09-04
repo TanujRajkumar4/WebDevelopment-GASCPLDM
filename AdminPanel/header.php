@@ -44,7 +44,7 @@ echo "<script>window.location.href = 'index.php';</script>";
 <link href="assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 <link href="assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
-<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="shortcut icon" href="../img/favicon.png"/>
 <!-- BEGIN TEXT Editor -->
 <link type="text/css" rel="stylesheet" href="texteditor/jquery-te-1.4.0.css">
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
@@ -70,7 +70,7 @@ echo "<script>window.location.href = 'index.php';</script>";
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="">
-			<img src="../imges/logo.png" alt="logo" class="logo-default"/>
+			<img src="../img/favicon.png" alt="logo" class="logo-default" height="30px" width="30px"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -149,41 +149,41 @@ echo "<script>window.location.href = 'index.php';</script>";
 					<span class="arrow open"></span>
 					</a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="about.php">
 					<i class="icon-diamond"></i>
 					<span class="title">About</span>
 					<span class="arrow "></span>
 					</a>
-				</li>
+				</li> -->
 					<li>
-					<a href="department.php?type=N">
+					<a href="department.php">
 					<i class="icon-diamond"></i>
 					<span class="title">Department Details</span>
 					<span class="arrow "></span>
 					</a>
 				</li>
 				<li>
-					<a href="news.php?type=E">
+					<a href="course.php">
 					<i class="icon-diamond"></i>
-					<span class="title">Events</span>
+					<span class="title">Course Details</span>
 					<span class="arrow "></span>
 					</a>
 				</li>
 				<li>
-					<a href="news.php?type=Ex">
+					<a href="faculty.php">
 					<i class="icon-diamond"></i>
-					<span class="title">Excursion</span>
+					<span class="title">Faculty Details</span>
 					<span class="arrow "></span>
 					</a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="gallery.php">
 					<i class="icon-diamond"></i>
 					<span class="title">Gallery</span>
 					<span class="arrow "></span>
 					</a>
-				</li>
+				</li> -->
 				</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

@@ -4,19 +4,9 @@ if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }
 include("header.php");
-$type=$_GET['type'];
-if($type == 'N')
-{
+
 	$title="Department";
-}
-elseif($type == 'E')
-{
-	$title="Course";
-}
-elseif($type == 'Ex')
-{
-	$title="Faculty";
-}
+
 
 ?>
 
@@ -65,7 +55,7 @@ elseif($type == 'Ex')
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="departmentadd.php?type=<?php echo$type;?> "  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
+							<form action="departmentadd.php"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
 								
                                 <div class="col-md-12" style="background:#fff;">
                                 <div class="form-body">                               
@@ -172,8 +162,8 @@ elseif($type == 'Ex')
 								<td><?php echo $dept['Dept_Name'];?></td>
 							   <td><?php echo $dept['Dept_OverView'];?></td>
 							   <td><?php echo $dept['Dept_Description'];?></td>
-                              <td><a href="departmentedit.php?id=<?php echo $dept['Dept_ID'];?>&type=<?php echo $type;?>">Edit</a>
-								<a href="departmentdelete.php?id=<?php echo $dept['Dept_ID']; ?> &type=<?php echo $type;?>" onclick="return myFunction()">Delete</a>
+                              <td><a href="departmentedit.php?id=<?php echo $dept['Dept_ID'];?>">Edit</a>
+								<a href="departmentdelete.php?id=<?php echo $dept['Dept_ID']; ?>" onclick="return myFunction()">Delete</a>
 								</td>
 							</tr>
 
