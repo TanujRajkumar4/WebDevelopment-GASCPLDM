@@ -1,19 +1,15 @@
 <?php 
+include("./header.php");
 session_start();
 if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }
-include("header.php");
-
 	$title="Department";
-
-
 ?>
 
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
-		<div class="page-content">
-			
+		<div class="page-content">			
 			<!-- END STYLE CUSTOMIZER -->
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
@@ -73,7 +69,7 @@ include("header.php");
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<textarea rows="5"  cols="80" name="Overview" class="jqte-test"  style="width:100%" value=""  required></textarea>
+											<textarea rows="5"  cols="80" name="Overview" style="width:100%" value=""  required></textarea>
 										</div>
 									</div>
 
@@ -82,7 +78,7 @@ include("header.php");
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<textarea rows="5"  cols="80" name="Description" class="jqte-test"  style="width:100%" value=""  required></textarea>
+											<textarea rows="5"  cols="80" name="Description" style="width:100%" value=""  required></textarea>
 										</div>
 									</div>
 									
