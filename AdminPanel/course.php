@@ -1,29 +1,15 @@
 <?php 
+include("./header.php");
 session_start();
 if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }
-include("header.php");
-$type=$_GET['type'];
-if($type == 'N')
-{
-	$title="Department";
-}
-elseif($type == 'E')
-{
 	$title="Course";
-}
-elseif($type == 'Ex')
-{
-	$title="Faculty";
-}
-
 ?>
 
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
-		<div class="page-content">
-			
+		<div class="page-content">			
 			<!-- END STYLE CUSTOMIZER -->
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
@@ -65,7 +51,7 @@ elseif($type == 'Ex')
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="newsadd.php?type=<?php echo$type;?> "  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
+							<form action="Courseadd.php"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
 								
                                 <div class="col-md-12" style="background:#fff;">
                                 <div class="form-body">                               
@@ -77,63 +63,13 @@ elseif($type == 'Ex')
 											<input type="text" id="Header" name="Name" required data-required="1" class="form-control" >
 										</div>
 									</div>
-									 <!-- <div class="form-group">
-										<label class="control-label col-md-3"><?php echo $title;?> Images<span class="required" aria-required="true">
-										* </span>
-										</label>
-                                        
-										<div class="col-md-7">
-											<input type="file" name="files[]" multiple />(ctrl+select multiple images)
-										</div>
-                                       
-									</div> -->
-									<!-- <?php if($type=='E' || $type == 'Ex' )
-										
-										{?>
-									<div class="form-group">
-										<label class="control-label col-md-3"><?php echo $title;?> Date <span class="required" aria-required="true">
-										* </span>
-										</label>
-											<div class="col-md-7">
-										<div class="input-group date date-picker margin-bottom-1" data-date-format="yyyy/mm/dd">
-									
-									<input type="text" id="e_date" name="e_date" required data-required="1"  readonly="" placeholder="Date" class="form-control" style="width:auto;">
-											<button class="btn btn-sm default" type="button"><img src="../imges/calen.png"></button>
-											</div>
-											</div>
-
-									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3"> <?php echo $title;?> Place <span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-7">
-											<input type="text" id="place" name="place" required data-required="1" class="form-control" >
-										</div>                                                                        
-									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3">Program of <?php echo $title;?>  <span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-7">
-											<textarea rows="5"  cols="80" name="program" class="jqte-test"  style="width:100%" value=""  required></textarea>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3">Map <span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-7">
-											<input type="text" id="map" name="map" required data-required="1" class="form-control" >
-										</div>
-									</div>
-										<?php }?> -->
+									 
                                     <div class="form-group">
 										<label class="control-label col-md-3">Overview <span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<textarea rows="5"  cols="80" name="Overview" class="jqte-test"  style="width:100%" value=""  required></textarea>
+											<textarea rows="5"  cols="80" name="Overview" style="width:100%" value=""  required></textarea>
 										</div>
 									</div>
 
@@ -142,7 +78,16 @@ elseif($type == 'Ex')
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<textarea rows="5"  cols="80" name="Description" class="jqte-test"  style="width:100%" value=""  required></textarea>
+											<textarea rows="5"  cols="80" name="Description" style="width:100%" value=""  required></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> Department ID<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<input type="number" id="Dept_ID" name="Dept_ID" required data-required="1" class="form-control" >
 										</div>
 									</div>
 									
@@ -186,43 +131,24 @@ elseif($type == 'Ex')
 							<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
 									 Rendering engine
 								: activate to sort column ascending" style="width: 100px;">
-									<!-- <?php echo $title;?>  -->
-									Department ID
+									
+									Course ID
 								</th>
-									<!-- <?php if($type=='E' || $type == 'Ex' )
-										{
-											?>
-								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
-									 Browser
-								: activate to sort column ascending" style="width: 191px;">
-									<?php echo $title;?> Date
-								</th>
-								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
-									 Engine version
-								: activate to sort column ascending" style="width: 162px;">
-									 Place
-								</th>
-								 <th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
-									 Platform(s)
-								: activate to sort column ascending" style="width: 243px;">
-									Program of <?php echo $title;?>
-								</th>
-                               <?php }?> -->
-
+									
 							   <th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
 									 Platform(s)
 								: activate to sort column ascending" style="width: 200px;">
-									Department Name
+									Course Name
 								</th>
 
 							      <th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
 									 CSS grade
 								: activate to sort column ascending" style="width: 300px;">
-									 Department Overview
+									 Course Overview
 								</th>
 								
 								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 300px;">
-									 Department Description
+									 Course Description
 								</th>
 
 							</tr>
@@ -231,24 +157,18 @@ elseif($type == 'Ex')
 
 <?php    
     include './dbConnect.php';
-	$query = "SELECT * FROM department;";
+	$query = "SELECT * FROM Course;";
 	$results = $db->query($query);
 	
 	foreach($results as $dept){
 ?>                            
 							<tr role="row" class="odd">
-								<td class="sorting_1"><?php echo $dept['Dept_ID'];?></td>
-								<!-- <?php if($type=='E' || $type == 'Ex' )
-								{
-									echo"<td>".$row['news_date']."</td>";
-									echo"<td>".$row['place']."</td>";
-									echo"<td>".$row['progm']."</td>";
-								}?> -->
-                               <td><?php echo $dept['Dept_Name'];?></td>
-							   <td><?php echo $dept['Dept_OverView'];?></td>
-							   <td><?php echo $dept['Dept_Description'];?></td>
-                              <td><a href="newsedit.php?id=<?php echo $row['news_id'];?>&type=<?php echo $type;?>">Edit</a>
-								<a href="newsdelete.php?id=<?php echo $row['news_id']; ?> &type=<?php echo $type;?>" onclick="return myFunction()">Delete</a>
+								<td class="sorting_1"><?php echo $dept['CourseID'];?></td>
+								<td><?php echo $dept['CourseName'];?></td>
+							   <td><?php echo $dept['CourseOverview'];?></td>
+							   <td><?php echo $dept['CourseDescription'];?></td>
+                              <td><a href="Courseedit.php?id=<?php echo $dept['CourseID'];?>">Edit</a>
+								<a href="Coursedelete.php?id=<?php echo $dept['CourseID']; ?>" onclick="return myFunction()">Delete</a>
 								</td>
 							</tr>
 
