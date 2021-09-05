@@ -3,7 +3,7 @@ include('header.php');
 include('dbConnect.php');
 if(isset($_GET['page_id']))
 {
-$Query = 'SELECT * FROM pages where page_id="'.$_GET['page_id'].'"';
+$Query = 'SELECT * FROM page where page_id="'.$_GET['page_id'].'"';
 $result = $db->query($Query);
 $result = $result->fetch();
 $title=$result['page_name'];

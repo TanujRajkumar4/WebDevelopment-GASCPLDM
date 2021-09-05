@@ -178,6 +178,14 @@ echo "<script>window.location.href = 'index.php';</script>";
 					<span class="arrow "></span>
 					</a>
 				</li>
+				<li>
+					<a href="page.php">
+					<i class="icon-diamond"></i>
+					<span class="title">Edit Pages</span>
+					<span class="arrow "></span>
+					</a>
+				</li>
+
 				<!-- <li>
 					<a href="gallery.php">
 					<i class="icon-diamond"></i>

@@ -90,32 +90,32 @@
  <ul>
   <li class="active"><a href="index.php">Home </a>
  </li>
- <li><a href=" ">About Us</a>
+ <li><a href="./page.php?page_id=1">About Us</a>
  <ul>
- <li><a href=" ">About The College</a></li>
- <li><a href=" ">Mission &amp; Vision</a></li>
- <li><a href=" ">Former Principal</a></li>
- <li><a href=" ">Alumni Association</a></li>
+ <li><a href="./page.php?page_id=2">About The College</a></li>
+ <li><a href="./page.php?page_id=3">Mission &amp; Vision</a></li>
+ <li><a href="./page.php?page_id=4">Former Principal</a></li>
+ <li><a href="./page.php?page_id=5">Alumni Association</a></li>
  </ul>
  </li>
- <li><a href="">Administration </a>
+ <li><a href="./page.php?page_id=6">Administration </a>
  <ul>
- <li><a href="">Principal</a></li>
- <li><a href="">Academic Council</a></li>
- <li><a href="">College Committee <i class="fa fa-angle-right"></i></a>
+ <li><a href="./page.php?page_id=7">Principal</a></li>
+ <li><a href="./page.php?page_id=8">Academic Council</a></li>
+ <li><a href="./page.php?page_id=9">College Committee <i class="fa fa-angle-right"></i></a>
  <ul>
- <li><a href=" ">UGC Committee</a></li>
- <li><a href=" ">NAAC</a></li>
- <li><a href=" ">Anti Ragging  </a></li>
- <li><a href=" ">Disciplinary Committee</a></li>
- <li><a href=" ">Placement</a></li>
- <li><a href=" ">Carrier Guidance</a></li>
- <li><a href=" ">Research Committee</a></li>
+ <li><a href="./page.php?page_id=10">UGC Committee</a></li>
+ <li><a href="./page.php?page_id=11">NAAC</a></li>
+ <li><a href="./page.php?page_id=12">Anti Ragging  </a></li>
+ <li><a href="./page.php?page_id=13">Disciplinary Committee</a></li>
+ <li><a href="./page.php?page_id=14">Placement</a></li>
+ <li><a href="./page.php?page_id=15">Carrier Guidance</a></li>
+ <li><a href="./page.php?page_id=16">Research Committee</a></li>
  </ul>
  </li>
-  <li><a href="">Finance Committee</a></li>
-  <li><a href="">College Office</a></li>
- <li><a href="">Annual Report</a></li>
+  <li><a href="./page.php?page_id=17">Finance Committee</a></li>
+  <li><a href="./page.php?page_id=18">College Office</a></li>
+ <li><a href="./page.php?page_id=19">Annual Report</a></li>
  </ul>
  </li>
 
@@ -139,10 +139,10 @@
  <li><a href="department.php?dept_ID=7">Costume Design and Fashion Department </a></li>
  </ul>
  </li>
- <li><a href=" ">Scholarship </a></li>
- <li><a href=" ">Library</a></li>
- <li><a href=" ">Physical Education</a></li>
- <li><a href=" ">Academic Calendar</a></li>
+ <li><a href="./page.php?page_id=20">Scholarship </a></li>
+ <li><a href="./page.php?page_id=21">Library</a></li>
+ <li><a href="./page.php?page_id=22">Physical Education</a></li>
+ <li><a href="./page.php?page_id=23">Academic Calendar</a></li>
  </ul>
  </li>
 <li><a href="#"><p1>Admission</p1></a>
@@ -160,14 +160,14 @@
 			<!--<li><a href="images/home/ug-IIIcounselling.pdf" target="_blank">UG-III Counselling</a></li>-->
             </ul>
           </li>
- <li><a href=" ">Facilities </a></li>
- <li><a href=" ">Examination </a>
+ <li><a href="./page.php?page_id=24">Facilities </a></li>
+ <li><a href="./page.php?page_id=25">Examination </a>
  <ul>
- <li><a href="#">Syllabus </a></li>
- <li><a href="#">Results</a></li>
+ <li><a href="./page.php?page_id=26">Syllabus </a></li>
+ <li><a href="./page.php?page_id=27">Results</a></li>
  </ul>
  </li>
- <li><a href=" ">Activities </a>
+ <li><a href="./page.php?page_id=28">Activities </a>
  <ul>
  <li><a href="#">NCC </a></li>
  <li><a href="#">NSS</a></li>
