@@ -119,7 +119,7 @@
  </ul>
  </li>
 
- <li><a href="../gascpldm1/course.php">Academics </a>
+ <li><a href="#">Academics </a>
  <ul>
  <li><a href="#">Programmes <i class="fa fa-angle-right"></i></a>
  <ul>
@@ -156,7 +156,7 @@
             <li><a href=" ">Fee Structure</a></li>
             <li><a href=" ">Courses Offered</a></li>
             <li><a href=" ">Eligibility Criteria</a></li>
-            <li><a href=" ">Contact</a></li>
+            <li><a href="./contact.php">Contact</a></li>
 			<!--<li><a href="images/home/ug-IIIcounselling.pdf" target="_blank">UG-III Counselling</a></li>-->
             </ul>
           </li>
@@ -178,7 +178,7 @@
  </li>
  <li><a href=" ">AICTE </a></li>
  <li><a href=" ">IQAC </a></li>
- <li><a href=" ">Contact </a></li>
+ <li><a href="./contact.php">Contact </a></li>
  </ul>
  </nav>
  </div>
