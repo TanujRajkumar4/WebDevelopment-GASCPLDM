@@ -1,20 +1,62 @@
 <?php
  include('header.php');
- include('dbConnect.php');
+ if(isset($_POST['sendmail']))
+{
+	if($_POST['Con_name'] != "" &&$_POST['Las_name'] != "" && $_POST['Con_email'] !="" && $_POST['Con_ph'] != "" && $_POST['Con_msg'] != "")
+	{
+	$fname=$_POST['Con_name'];
+	$lname=$_POST['Las_name'];
+	$email_id=$_POST['Con_email'];
+	$amt=$_POST['Con_msg'];
+	$phn=$_POST['Con_ph'];
+	$to = "induvips@gmail.com";
+	$subject = "Donation / Contribution Details";
+	$message="<style type='text/css'>
+	p,td{font-family:Verdana;font-size:12px;font-color:black;}
+	strong{font-family:Verdana;font-size:12px;font-color:black; font-weight:bold}
+	</style>";
+	$message.="<strong>Dear Admin,</strong> <br>
+	<p>Kindly find the below details for accessing the Contributor. <br/>	
+	<p><b>PERSONAL DETAILS</b></p>
+	<p><b>Fullname :</b> $name </p>
+	<p><b>Email :</b> $email_id </p>
+	<p><b>Phone Number: </b> $phn </p>
+	<p><b>Amount :</b> $amt </p>
+	<p><b>Address :</b> $add </p>
+	<p><b>Comments :</b> $cmmts </p>
+	";	
+	$message.="<p><i>This email is  system generated; please do not reply to this email.</i></p>";
+	$headers='From: www.gascpldm.ac.in'."\r\n".
+	'Content-type: text/html; charset=iso-8859-1\r\n'.
+	'Reply-To: webmaster@example.com'."\r\n".
+	'X-Mailer: PHP/' . phpversion();
+	if(mail($to,$subject,$message,$headers))
+		{
+			echo "<script>alert('Your Responses Recorded. Thank you');window.location.href='contact.php';</script>";
+		}
+	else
+		{
+			echo "<script>alert('Please Try after Sometimes!');window.location.href='contact.php';</script>";
+		}				
+	}
+	else
+	{
+		echo "<script>alert('Please Fill all the fields!');window.location.href='contact.php';</script>";
+	}
+}
  ?>
-
- <div class="pagehding-sec">
+<div class="pagehding-sec">
  <div class="images-overlay"></div>
  <div class="container">
  <div class="row">
  <div class="col-md-12">
  <div class="page-heading">
- <h1>Course Details </h1>
+ <h1>contact us </h1>
  </div>
  <div class="breadcrumb-list">
   <ul>
- <li><a href="index.html">Home </a></li>
- <li><a href="#">Course Details </a></li>
+ <li><a href="index.php">Home </a></li>
+ <li><a href="#">contact us </a></li>
  </ul>
  </div>
  </div>
@@ -23,150 +65,90 @@
  </div>
 
 
- <div class="course-details-page pt-100 pb-70">
+ <div class="contact-page-sec pt-100 pb-100">
  <div class="container">
  <div class="row">
- <div class="col-md-3">
- <div class="course-tab">
- <ul class="service-tab">
- <li class="active"><a data-toggle="tab" href="#overview" aria-expanded="true">Course Overview </a></li>
- <li class=""><a data-toggle="tab" href="#curriculum" aria-expanded="false">Course Curriculum </a></li>
- </ul>
+ <div class="col-md-8">
+ <div class="contact-page-map">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15666.067089369646!2d77.2843894!3d10.9998004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x494fd243cf8dd43e!2sGOVERNMENT%20ARTS%20AND%20SCIENCE%20COLLEGE%2CPALLADAM.!5e0!3m2!1sen!2sin!4v1630838646588!5m2!1sen!2sin" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
  </div>
  </div>
- <div class="col-md-6">
- <div class="tab-content">
-
- <div id="overview" class="tab-pane active">
- <div class="row">
+ <div class="col-md-4">
+ <div class="contact-info">
+ <div class="contact-info-item">
+ <div class="contact-info-icon">
+ <i class="fa fa-map-marker"></i>
+ </div>
+ <div class="contact-info-text">
+ <h2>address </h2>
+ <span>Californiya , United State </span>
+ </div>
+ </div>
+ </div>
+ <div class="contact-info">
+ <div class="contact-info-item">
+ <div class="contact-info-icon">
+ <i class="fa fa-envelope"></i>
+ </div>
+ <div class="contact-info-text">
+ <h2>e-mail </h2>
+ <span><a href="" class="__cf_email__">principalpalladam@gmail.com </a></span>
+ </div>
+ </div>
+ </div>
+ <div class="contact-info">
+ <div class="contact-info-item">
+ <div class="contact-info-icon">
+ <i class="fa fa-clock-o"></i>
+ </div>
+ <div class="contact-info-text">
+ <h2>office time </h2>
+ <span>Mon - Thu 9:00 __ - 4.00 pm </span>
+ <span>Thu - Mon 10.00 __ - 5.00 pm </span>
+ <span>Mon Day Office Holiday </span>
+ </div>
+ </div>
+ </div>
+ </div>
  <div class="col-md-12">
- <div class="course-details">
- <img src="img/slide1.jpg" alt="" />
- <h2><a href="#">Duo nibh malis dolorem __. Te qui tantas quidam ___________, ut erroribus definitionem mea. ___ an nominati consequuntu </a></h2>
- <p>Lorem ipsum dolor sit ____, ut vel quodsi feugait ________, ex qui lucilius voluptatum ___________. Velit harum te ius, ________ sapientem ea sit, id _____ utinam pri. Et sit ________ intellegam. His quas tibique __, at nihil doming nec, ______ tibique adipisci sit an. ______ nostrud accumsan vim at. __ eos mollis ornatus vocibus, __ eos persius liberavisse, ne ___ ferri posse fuisset. </p>
- <p>Dicam antiopam reformidans id ___. Cum ei elit nostrud, __ per erant conceptam. Nam __ impedit meliore mnesarchum
-. Eu _____ quodsi oportere vis. Eam ________ constituto ex, et sea _______ qualisque scribentur, libris feugiat ___ at.
- </p>
+ <div class="contact-page-form">
+ <form method="POST" action="contact.php">
+ <h2>Send your message </h2>
+ <div class="col-md-6 col-sm-6 col-xs-12">
+ <div class="single-input-field">
+ <input type="text" placeholder="First Name" name="Con_name"/>
  </div>
  </div>
+ <div class="col-md-6 col-sm-6 col-xs-12">
+ <div class="single-input-field">
+ <input type="text" placeholder="Last Name" name="Las_name"/>
  </div>
  </div>
-
-
- <div id="curriculum" class="tab-pane">
- <div class="row">
- <div class="col-md-12">
- <div class="faq-sec">
- <div class="panel-group" id="accordion" role="tablist">
- <div class="panel">
- <div class="panel-heading" role="tab" id="titleOne">
- <h4 class="panel-title">
- <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-Learn Start Basic </a>
- </h4>
- </div>
- <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="titleOne">
- <div class="panel-content">
- <p>Errem delicatissimi no mel, _____ vocibus ut vim, te ___ aeterno nominavi delectus. Tamquam _______ pro no </p>
- <div class="coruse-lesson">
- <div class="coruse-left-text">
- <span class="coruse-left-icon">
- <i class="fa fa-file-pdf-o"></i>
- </span>
- <span class="coruse-left-title">
-Lecture 1.1
- </span>
- </div>
- <div class="coruse-center-text">
- <span>
-Lesson With PDF File
- </span>
- </div>
- <div class="coruse-right-text">
- <span class="coruse-right-icon">
- <i class="fa fa-clock-o"></i>
- </span>
- <span class="coruse-right-time">
-35 Minite
- </span>
+ <div class="col-md-6 col-sm-6 col-xs-12">
+ <div class="single-input-field">
+ <input type="text" placeholder="Phone Number" name="Con_ph"/>
  </div>
  </div>
- <div class="coruse-lesson">
- <div class="coruse-left-text">
- <span class="coruse-left-icon">
- <i class="fa fa-file-text"></i>
- </span>
- <span class="coruse-left-title">
-Lecture 1.2
- </span>
- </div>
- <div class="coruse-center-text">
- <span>
-Lesson With File text
- </span>
- </div>
- <div class="coruse-right-text">
- <span class="coruse-right-icon">
- <i class="fa fa-clock-o"></i>
- </span>
- <span class="coruse-right-time">
-45 Minite
- </span>
+ <div class="col-md-6 col-sm-6 col-xs-12">
+ <div class="single-input-field">
+ <input type="email" placeholder="E-mail" name="Con_email"/>
  </div>
  </div>
- <div class="coruse-lesson">
- <div class="coruse-left-text">
- <span class="coruse-left-icon">
- <i class="fa fa-play-circle"></i>
- </span>
- <span class="coruse-left-title">
-Lecture 1.3
- </span>
- </div>
- <div class="coruse-center-text">
- <span>
-Lesson With Vedio File
- </span>
- </div>
- <div class="coruse-right-text">
- <span class="coruse-right-icon">
- <i class="fa fa-clock-o"></i>
- </span>
- <span class="coruse-right-time">
-45 Minite
- </span>
+ <div class="col-md-12 message-input">
+ <div class="single-input-field">
+ <textarea placeholder="Write Your Message" name="Con_msg"></textarea>
  </div>
  </div>
- </div>
- </div>
- </div>
- </div>
- </div>
- </div>
- </div>
- </div>
- </div>
- </div>
- <div class="col-md-3">
- <div class="event-details-info">
- <h2>Register Now </h2>
- <ul>
- <li>Name: <span><input type="text" name="std_name"> </span></li>
- <li>Phone Number: <span><input type="text" name="std_phone"> </span></li>
- <li>Preferred Course: <span><input type="text" name="course"> </span></li>
- <li>Qualification: <span><input type="text" name="qualification"> </span></li>
- <li>Location: <span><input type="text" name="std_loc"></span></li>
- </ul>
  <div class="single-input-fieldsbtn">
- <input type="submit" value="Register"/>
+ <input type="submit" name="sendmail" value="Send Now" />
+ </div>
+ </form>
  </div>
  </div>
  </div>
-
  </div>
  </div>
- </div>
-<script src="js/jquery-2.2.4.min.js"></script>
+</script><script src="js/jquery-2.2.4.min.js"></script>
  <script src="js/bootstrap.min.js"></script>
  <script src="js/isotope.pkgd.min.js"></script>
  <script src="js/jquery.magnific-popup.min.js"></script>
