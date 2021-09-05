@@ -13,9 +13,13 @@ if(isset($_GET["Course_ID"])){
  <div class="row">
  <div class="col-md-12">
  <div class="page-heading">
- <h1><?php echo getCourseName($Course_ID); 
- $course_Details=getCourseDetails($Course_ID);?>
- </h1>
+            <h1>
+                <?php 
+                        $course_name=getCourseName($Course_ID); 
+                        echo $course_name;
+                        $course_Details=getCourseDetails($Course_ID);
+                ?>
+            </h1>
  </div>
  <div class="breadcrumb-list">
   <ul>
@@ -48,11 +52,11 @@ if(isset($_GET["Course_ID"])){
  <div class="col-md-12">
  <div class="course-details">
  <img src="img/slide1.jpg" alt="" />
- <h2><a href="#"> <?php ?> </a></h2>
- <p>Lorem ipsum dolor sit ____, ut vel quodsi feugait ________, ex qui lucilius voluptatum ___________. Velit harum te ius, ________ sapientem ea sit, id _____ utinam pri. Et sit ________ intellegam. His quas tibique __, at nihil doming nec, ______ tibique adipisci sit an. ______ nostrud accumsan vim at. __ eos mollis ornatus vocibus, __ eos persius liberavisse, ne ___ ferri posse fuisset. </p>
- <p>Dicam antiopam reformidans id ___. Cum ei elit nostrud, __ per erant conceptam. Nam __ impedit meliore mnesarchum
-. Eu _____ quodsi oportere vis. Eam ________ constituto ex, et sea _______ qualisque scribentur, libris feugiat ___ at.
- </p>
+ <h2><a href="#"> <?php echo $course_name;?> </a></h2>
+
+ <p><?php echo $course_Details['CourseOverview'];?></p>
+ 
+ <p><?php echo $course_Details['CourseDescription'];?></p>
  </div>
  </div>
  </div>
@@ -68,36 +72,38 @@ if(isset($_GET["Course_ID"])){
  <div class="panel-heading" role="tab" id="titleOne">
  <h4 class="panel-title">
  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-Learn Start Basic </a>
+    <?php echo $course_name;?>     
+</a>
  </h4>
  </div>
  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="titleOne">
  <div class="panel-content">
- <p>Errem delicatissimi no mel, _____ vocibus ut vim, te ___ aeterno nominavi delectus. Tamquam _______ pro no </p>
+ <p><?php echo $course_Details['CourseOverview'];?> </p>
  <div class="coruse-lesson">
  <div class="coruse-left-text">
+     <span><a href="<?php echo $course_Details['CourseCurriculumURL'];?>">
  <span class="coruse-left-icon">
  <i class="fa fa-file-pdf-o"></i>
  </span>
  <span class="coruse-left-title">
-Lecture 1.1
+ <?php echo $course_name;?>
  </span>
  </div>
  <div class="coruse-center-text">
- <span>
-Lesson With PDF File
- </span>
- </div>
- <div class="coruse-right-text">
+     Course Curriculum
+    </span>
+</div>
+</a>
+ <!-- <div class="coruse-right-text">
  <span class="coruse-right-icon">
  <i class="fa fa-clock-o"></i>
  </span>
  <span class="coruse-right-time">
 35 Minite
  </span>
+ </div> -->
  </div>
- </div>
- <div class="coruse-lesson">
+ <!-- <div class="coruse-lesson">
  <div class="coruse-left-text">
  <span class="coruse-left-icon">
  <i class="fa fa-file-text"></i>
@@ -119,8 +125,8 @@ Lesson With File text
 45 Minite
  </span>
  </div>
- </div>
- <div class="coruse-lesson">
+ </div> -->
+ <!-- <div class="coruse-lesson">
  <div class="coruse-left-text">
  <span class="coruse-left-icon">
  <i class="fa fa-play-circle"></i>
@@ -142,7 +148,7 @@ Lesson With Vedio File
 45 Minite
  </span>
  </div>
- </div>
+ </div> -->
  </div>
  </div>
  </div>

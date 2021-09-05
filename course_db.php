@@ -16,7 +16,7 @@ function getCourseDetails($Course_ID){
     $query = "SELECT * FROM course
               WHERE CourseID = '$Course_ID'";
     $result = $db->query($query);
-    //$result = $result->fetch();
+    $result = $result->fetch();
     //var_dump($result);    
     return $result;
 }
