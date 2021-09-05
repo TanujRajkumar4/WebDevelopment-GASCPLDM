@@ -1,7 +1,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 2015 &copy; NIK Tuition.
+	2021, Puratchi Thalaivi Amma Government Arts and Science College Admin Panel
 	</div>
 	<div class="scroll-to-top">
 		<i class="icon-arrow-up"></i>
