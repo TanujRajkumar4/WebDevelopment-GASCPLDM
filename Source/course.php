@@ -1,6 +1,6 @@
 <?php
  include('header.php');
- if(isset($_POST['sendmail']))
+ if(isset($_POST['submit']))
 {
 	if($_POST['Con_name'] != "" &&$_POST['Las_name'] != "" && $_POST['Con_email'] !="" && $_POST['Con_ph'] != "" && $_POST['Con_msg'] != "")
 	{
@@ -140,7 +140,7 @@
  </div>
  </div>
  <div class="single-input-fieldsbtn">
- <input type="submit" name="sendmail" value="Send Now" />
+ <input type="submit" name="submit" value="Send Now" />
  </div>
  </form>
  </div>
