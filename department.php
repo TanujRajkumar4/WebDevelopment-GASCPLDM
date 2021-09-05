@@ -107,7 +107,7 @@
  <div class="course-details">     
  <!-- <img src="img/slide1.jpg" alt="" /> --> 
  <?php $facultyInfo = getFacultyList($dept_ID);$count=1;?>
- <table class="table table-hover table-striped">
+ <!-- <table class="table table-hover table-striped">
   <thead>
     <tr class="table-dark">
       <th scope="col">S.No.</th>
@@ -116,19 +116,39 @@
       <th scope="col">Qualification</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody> -->
         <?php foreach($facultyInfo as $faculty): ?>
-    <tr>
+    <!-- <tr>
       <th scope="row"><?php echo $count;?></th>
-      <td><?php echo $faculty["FacultyName"];?></td>
-      <td><?php echo $faculty["FacultyDesignation"];?></td>
-      <td><?php echo $faculty["FacultyQualification"];?></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <?php $count++;?>
-            <?php endforeach;?>
-
+    
   </tbody>
-</table>
+</table> -->
+<div class="col col-md-6">
+  <div class="instructor-member">
+    <div class="instructor-member-thumb">
+      <img src="<?php echo $faculty["FacultyPhotoURL"];?>" alt="" />
+      <!-- <div class="instructor-overlay">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-google"></i></a></li>
+          <li><a href="#"><i class="fa fa-skype"></i></a></li>
+        </ul>
+      </div> -->
+    </div>
+    <h2><?php echo $faculty["FacultyName"];?></h2>
+    <h3><?php echo $faculty["FacultyDesignation"];?></h3>
+    <h5><?php echo $faculty["FacultyQualification"];?></h5>
+  </div>
+</div>
+<?php endforeach;?>
+
 
  </div>
  </div>
