@@ -1,10 +1,12 @@
 <?php if(isset($_POST['submit']))
 {
-    include 'db.php';	  
+    include 'dbConnect.php';	  
 	$username=$_POST['username'];
 	$pass=$_POST['password'];
-	$result = mysqli_query($con,"SELECT * FROM test_admin");
-	while($row = mysqli_fetch_array($result))
+	$query="SELECT * FROM test_admin";
+	$result = $db->query($query);
+	//$result=$result->fetch();
+	foreach($result as $row)
 	{
 	  $dbuname=$row['admin_user'];
 	  $dbpass=$row['admin_pass'];	

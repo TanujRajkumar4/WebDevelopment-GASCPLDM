@@ -90,7 +90,7 @@
  <ul>
   <li class="active"><a href="index.php">Home </a>
  </li>
- <li><a href="./page.php?page_id=1">About Us</a>
+ <li><a href="#">About Us</a>
  <ul>
  <li><a href="./page.php?page_id=2">About The College</a></li>
  <li><a href="./page.php?page_id=3">Mission &amp; Vision</a></li>
@@ -98,7 +98,7 @@
  <li><a href="./page.php?page_id=5">Alumni Association</a></li>
  </ul>
  </li>
- <li><a href="./page.php?page_id=6">Administration </a>
+ <li><a href="#">Administration </a>
  <ul>
  <li><a href="./page.php?page_id=7">Principal</a></li>
  <li><a href="./page.php?page_id=8">Academic Council</a></li>
@@ -161,13 +161,13 @@
             </ul>
           </li>
  <li><a href="./page.php?page_id=24">Facilities </a></li>
- <li><a href="./page.php?page_id=25">Examination </a>
+ <li><a href="#">Examination </a>
  <ul>
  <li><a href="./page.php?page_id=26">Syllabus </a></li>
  <li><a href="./page.php?page_id=27">Results</a></li>
  </ul>
  </li>
- <li><a href="./page.php?page_id=28">Activities </a>
+ <li><a href="#">Activities </a>
  <ul>
  <li><a href="#">NCC </a></li>
  <li><a href="#">NSS</a></li>
@@ -176,8 +176,8 @@
  <li><a href="#">ECO Club</a></li>
  </ul>
  </li>
- <li><a href=" ">AICTE </a></li>
- <li><a href=" ">IQAC </a></li>
+ <li><a href="">AICTE </a></li>
+ <li><a href="">IQAC </a></li>
  <li><a href="./contact.php">Contact </a></li>
  </ul>
  </nav>
