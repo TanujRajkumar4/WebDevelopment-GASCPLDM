@@ -142,7 +142,7 @@
         </ul>
       </div> -->
     </div>
-    <h2><?php echo $faculty["FacultyName"];?> <?php echo $faculty["FacultyQualification"];?></h2>
+    <h2><?php echo $faculty["FacultyName"];?> <span style="font-size: 12px;"><?php echo $faculty["FacultyQualification"];?></span></h2>
     <h3><?php echo $faculty["FacultyDesignation"];?></h3>
    
   </div>
