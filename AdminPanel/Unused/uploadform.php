@@ -4,8 +4,10 @@ session_start();
 if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }
-	$title="Faculty";
+	$title="Course";
 ?>
+
+
 
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
@@ -51,7 +53,13 @@ echo "<script>window.location.href = 'index.php';</script>";
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="Facultyadd.php?ID=4"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
+
+							<form action="upload.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
+</form>
+							<form action="Courseadd.php"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
 								
                                 <div class="col-md-12" style="background:#fff;">
                                 <div class="form-body">                               
@@ -74,20 +82,11 @@ echo "<script>window.location.href = 'index.php';</script>";
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Designation <span class="required" aria-required="true">
+										<label class="control-label col-md-3">Description <span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<textarea rows="1"  cols="80" name="Designation" style="width:100%" value=""  required></textarea>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label class="control-label col-md-3">Qualification <span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-7">
-											<textarea rows="1"  cols="80" name="Qualification" style="width:100%" value=""  required></textarea>
+											<textarea rows="5"  cols="80" name="Description" style="width:100%" value=""  required></textarea>
 										</div>
 									</div>
 
@@ -99,16 +98,6 @@ echo "<script>window.location.href = 'index.php';</script>";
 											<input type="number" id="Dept_ID" name="Dept_ID" required data-required="1" class="form-control" >
 										</div>
 									</div>
-
-									<div class="form-group">
-										<label class="control-label col-md-3">Faculty Image<span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-7">
-											<input type="file" name="fileToUpload" id="fileToUpload" required class="form-control">
-										</div>
-									</div>
-
 									
 									 
                         </div>
@@ -151,29 +140,23 @@ echo "<script>window.location.href = 'index.php';</script>";
 									 Rendering engine
 								: activate to sort column ascending" style="width: 100px;">
 									
-									Faculty ID
+									Course ID
 								</th>
 									
 							   <th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
 									 Platform(s)
 								: activate to sort column ascending" style="width: 200px;">
-									Faculty Name
+									Course Name
 								</th>
 
 							      <th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
 									 CSS grade
 								: activate to sort column ascending" style="width: 300px;">
-									 Faculty Overview
+									 Course Overview
 								</th>
 								
 								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 300px;">
-									 Faculty Designation
-								</th>
-								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 300px;">
-									 Faculty Qualification
-								</th>
-								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 100px;">
-									 Actions
+									 Course Description
 								</th>
 
 							</tr>
@@ -182,24 +165,22 @@ echo "<script>window.location.href = 'index.php';</script>";
 
 <?php    
     include './dbConnect.php';
-	$query = "SELECT * FROM Faculty;";
+	$query = "SELECT * FROM Course;";
 	$results = $db->query($query);
-	$count=0;
-	foreach($results as $faculty){
+	
+	foreach($results as $dept){
 ?>                            
 							<tr role="row" class="odd">
-								<td class="sorting_1"><?php echo $faculty['FacultyID'];?></td>
-								<td><?php echo $faculty['FacultyName'];?></td>
-							   <td><?php echo $faculty['FacultyOverview'];?></td>
-							   <td><?php echo $faculty['FacultyDesignation'];?></td>
-							   <td><?php echo $faculty['FacultyQualification'];?></td>
-                              <td><a href="Facultyedit.php?id=<?php echo $faculty['FacultyID'];?>">Edit</a>
-								<a href="Facultydelete.php?id=<?php echo $faculty['FacultyID']; ?>" onclick="return myFunction()">Delete</a>
+								<td class="sorting_1"><?php echo $dept['CourseID'];?></td>
+								<td><?php echo $dept['CourseName'];?></td>
+							   <td><?php echo $dept['CourseOverview'];?></td>
+							   <td><?php echo $dept['CourseDescription'];?></td>
+                              <td><a href="Courseedit.php?id=<?php echo $dept['CourseID'];?>">Edit</a>
+								<a href="Coursedelete.php?id=<?php echo $dept['CourseID']; ?>" onclick="return myFunction()">Delete</a>
 								</td>
 							</tr>
 
-
-<?php $count++; } $count++;?>                            
+<?php } ?>                            
                             
                             </tbody>
 							</table></div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2021 at 09:44 AM
+-- Generation Time: Sep 08, 2021 at 08:43 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -93,8 +93,7 @@ CREATE TABLE `faculty` (
 INSERT INTO `faculty` (`FacultyID`, `FacultyName`, `FacultyDesignation`, `FacultyQualification`, `FacultyOverview`, `FacultyPhotoURL`, `Dept_ID`) VALUES
 (1, 'Advaith', 'Assistant Professor', 'Ph.D.', 'TEST', 'img/person_avatar.png', 1),
 (2, 'Kevin', 'Assistant Professor', 'M.A. Tamil', '', 'img/person_avatar.png', 1),
-(3, 'Andrew', 'Associate Professor', 'Ph.D.', '', 'img/person_avatar.png', 2),
-(6, 'TEST', 'TEST', 'TEST', 'TEST', 'img/person_avatar.png', 1);
+(3, 'Andrew', 'Associate Professor', 'Ph.D.', '', 'img/person_avatar.png', 2);
 
 -- --------------------------------------------------------
 
@@ -217,12 +216,6 @@ ALTER TABLE `course`
 --
 ALTER TABLE `department`
   MODIFY `Dept_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `faculty`
---
-ALTER TABLE `faculty`
-  MODIFY `FacultyID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `test_admin`
