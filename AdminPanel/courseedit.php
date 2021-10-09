@@ -1,8 +1,4 @@
 <?php 
-session_start();
-if(!isset($_SESSION['adminuser'])){
-echo "<script>window.location.href = 'index.php';</script>";	
-}
 include("header.php");
 include('./dbConnect.php');
 $Courseid=$_GET['id'];

@@ -78,6 +78,9 @@ include('dbConnect.php');
  </div>
  <div class="why-choose-text">
  <h2><a href="#">Events </a></h2>
+
+ <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrolldelay="400" behavior="scroll" height="150px">
+ <ul>
  <?php 
  $Query = $db->prepare("SELECT * FROM events where events_status='A'");
  $Query->execute();
@@ -85,12 +88,12 @@ include('dbConnect.php');
  foreach($results as $result)
 {
  ?>
- <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrolldelay="400" behavior="scroll" height="150px">
- <a href="events.php?eve_id=<?php echo $result['events_id'];?>"><?php echo $result['events_title'];?></a>
- </marquee>
+ <li><a href="event.php?eve_id=<?php echo $result['events_id'];?>"><?php echo $result['events_title'];?></a></li><br/>
  <?php 
  }
  ?>
+ </marquee>
+ 
  </div>
  </div>
  </div>
@@ -214,7 +217,7 @@ include('dbConnect.php');
  <div class="gallery-item">
  <img src="img/g6.jpg" alt="">
   <div class="title" style="text-align: center;padding: 10px 0 0 0;">
- <h2>Newspaper </h2>
+ <h2>Events </h2>
  </div>
  <div class="gallery-overlay">
  <div class="gallery-overlay-text">

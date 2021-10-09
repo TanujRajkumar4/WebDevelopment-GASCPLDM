@@ -3,7 +3,7 @@ include("./header.php");
 if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }
-	$title="Department";
+	$title="Events";
 ?>
 
 	<!-- BEGIN CONTENT -->
@@ -50,7 +50,7 @@ echo "<script>window.location.href = 'index.php';</script>";
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="departmentadd.php"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
+							<form action="eventsadd.php"  class="form-horizontal"  method="POST" enctype="multipart/form-data" >
 								
                                 <div class="col-md-12" style="background:#fff;">
                                 <div class="form-body">                               
@@ -59,21 +59,21 @@ echo "<script>window.location.href = 'index.php';</script>";
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<input type="text" id="Header" name="Name" required data-required="1" class="form-control" >
+											<input type="text" id="eve_Name" name="eve_Name" required data-required="1" class="form-control" >
 										</div>
 									</div>
 									 
                                     <div class="form-group">
-										<label class="control-label col-md-3">Overview <span class="required" aria-required="true">
+										<label class="control-label col-md-3"><?php echo $title;?> Date <span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<textarea rows="5"  cols="80" name="Overview" style="width:100%" value=""  required></textarea>
+											<input type="Date" id="eve_date" name="eve_date" required class="form-control" >
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Description <span class="required" aria-required="true">
+										<label class="control-label col-md-3"> <?php echo $title;?> Description <span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-7">
@@ -81,6 +81,14 @@ echo "<script>window.location.href = 'index.php';</script>";
 										</div>
 									</div>
 									
+									<div class="form-group">
+										<label class="control-label col-md-3"><?php echo $title;?> Photos <span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<input type="file" name="eve_phot" resquired>
+										</div>
+									</div>
 									 
                         </div>
 								
@@ -122,47 +130,59 @@ echo "<script>window.location.href = 'index.php';</script>";
 									 Rendering engine
 								: activate to sort column ascending" style="width: 100px;">
 									
-									Department ID
-								</th>
+									SNO								</th>
 									
 							   <th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
 									 Platform(s)
 								: activate to sort column ascending" style="width: 200px;">
-									Department Name
+									Event Title
 								</th>
 
 							      <th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
 									 CSS grade
 								: activate to sort column ascending" style="width: 300px;">
-									 Department Overview
+									 Event Date
 								</th>
 								
 								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 300px;">
-									 Department Description
+									 Event Description
+								</th>
+                                
+								
+								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 300px;">
+									 Event Photo
 								</th>
 
+
+								
+								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 300px;">
+									Action
+								</th>
 							</tr>
 							</thead>
 							<tbody>
 
 <?php    
     include './dbConnect.php';
-	$query = "SELECT * FROM department;";
-	$results = $db->query($query);
-	
+	$query = "SELECT * FROM events;";
+    $results = $db->query($query);
+    $i=1;
 	foreach($results as $dept){
 ?>                            
 							<tr role="row" class="odd">
-								<td class="sorting_1"><?php echo $dept['Dept_ID'];?></td>
-								<td><?php echo $dept['Dept_Name'];?></td>
-							   <td><?php echo $dept['Dept_OverView'];?></td>
-							   <td><?php echo $dept['Dept_Description'];?></td>
-                              <td><a href="departmentedit.php?id=<?php echo $dept['Dept_ID'];?>">Edit</a>
-								<a href="departmentdelete.php?id=<?php echo $dept['Dept_ID']; ?>" onclick="return myFunction()">Delete</a>
+								<td class="sorting_1"><?php echo $i;?></td>
+								<td><?php echo $dept['events_title'];?></td>
+                               <td><?php $date_yy=date("d-m-Y",strtotime($dept['events_date'])); echo $date_yy;?></td>
+							   <td><?php echo $dept['events_desc'];?></td>
+                               <td><img src="<?php echo $dept['events_photo'];?>" height="150px" width="150px"></td>
+                              <td><a href="eventsedit.php?id=<?php echo $dept['events_id'];?>">Edit</a>
+								<a href="eventsdelete.php?id=<?php echo $dept['events_id']; ?>" onclick="return myFunction()">Delete</a>
 								</td>
 							</tr>
 
-<?php } ?>                            
+<?php 
+$i++;
+} ?>                            
                             
                             </tbody>
 							</table></div>

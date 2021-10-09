@@ -1,6 +1,5 @@
 <?php 
 include("./header.php");
-session_start();
 if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }

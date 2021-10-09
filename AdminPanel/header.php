@@ -12,8 +12,10 @@ echo "<script>window.location.href = 'index.php';</script>";
 <!-- BEGIN HEAD -->
 
 <!-- Mirrored from www.keenthemes.com/preview/metronic/theme/templates/admin/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Nov 2014 14:12:00 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
 <head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <meta charset="utf-8"/>
 <title>GASCPLDM | Admin Panel</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -182,6 +184,13 @@ echo "<script>window.location.href = 'index.php';</script>";
 					<a href="page.php">
 					<i class="icon-diamond"></i>
 					<span class="title">Edit Pages</span>
+					<span class="arrow "></span>
+					</a>
+				</li>
+				<li>
+					<a href="events.php">
+					<i class="icon-diamond"></i>
+					<span class="title">Events</span>
 					<span class="arrow "></span>
 					</a>
 				</li>

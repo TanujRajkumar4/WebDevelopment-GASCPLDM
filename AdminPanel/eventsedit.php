@@ -2,7 +2,7 @@
 include("header.php");
 include('./dbConnect.php');
 $dept_id=$_GET['id'];
-$title="Department";
+$title="Events";
 
 ?>
 
@@ -51,15 +51,14 @@ $title="Department";
 						<?php
   
  
-  $query = "SELECT * FROM department WHERE Dept_ID LIKE '$dept_id';";
+  $query = "SELECT * FROM events WHERE events_id='$dept_id';";
    $results = $db->query($query);
-   $results = $results->fetch();
- 
+   $results = $results->fetch(); 
 ?>
 
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="departmentedit2.php?id=<?php echo $results['Dept_ID']?>"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
+							<form action="eventsedit2.php?id=<?php echo $results['events_id']?>"  class="form-horizontal"  method="POST" enctype="multipart/form-data"  >
 								
                                 <div class="col-md-12" style="background:#fff;">
                                 <div class="form-body">                               
@@ -68,16 +67,16 @@ $title="Department";
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<input type="text" id="Name" name="Name" required data-required="1" class="form-control" value="<?php echo $results['Dept_Name'];?>">
+											<input type="text" name="eve_Name" required data-required="1" class="form-control" value="<?php echo $results['events_title'];?>">
 										</div>
 									</div>
 									
                                     <div class="form-group">
-										<label class="control-label col-md-3">Overview <span class="required" aria-required="true">
+										<label class="control-label col-md-3"><?php echo $title;?> Date <span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<textarea rows="5"  cols="80" name="Overview" class="jqte-test"  style="width:100%" value=""  required><?php echo $results['Dept_OverView'];?></textarea>
+                                        <input type="Date" id="eve_date" name="eve_date" required class="form-control" value="<?php echo $results['events_date'];?>">
 										</div>
 									</div>
 									
@@ -86,10 +85,19 @@ $title="Department";
 										* </span>
 										</label>
 										<div class="col-md-7">
-											<textarea rows="5"  cols="80" name="Description" class="jqte-test"  style="width:100%" value=""  required><?php echo $results['Dept_Description'];?></textarea>
+											<textarea rows="5"  cols="80" name="Description" style="width:100%" value=""  required><?php echo $results['events_desc'];?></textarea>
 										</div>
 									</div>
-									
+									<div class="form-group">
+										<label class="control-label col-md-3"><?php echo $title;?> Photos <span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<input type="file" name="eve_phot" resquired>
+                                            <img src="<?php echo $results['events_photo'];?>" height="150px" width="150px">
+                                            <input type="hidden" name="eve_pt_url" value="<?php echo $results['events_photo'];?>">
+										</div>
+									</div>
                         </div>
 								
                                 </div>

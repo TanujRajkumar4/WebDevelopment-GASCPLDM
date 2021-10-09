@@ -68,7 +68,7 @@
  </div>
  <div class="col-md-8 col-sm-12 col-xs-8 menu-center">
   <a href="index.html"><center style="padding-top: 20px;"><h1>Puratchi Thalaivi Amma Government Arts and Science College, Palladam</h1><h3>(Affiliated to Bharathiar University, Coimbatore)
-<br>NAAC Re-accredited with B Grade<br>ESTD - 2017
+<br>ESTD - 2017
 </h3></center></a>
  </div>
  
