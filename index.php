@@ -1,5 +1,6 @@
 <?php
 include('header.php');
+include('dbConnect.php');
 ?>
  <div class="slider">
  <div class="all-slide owl-item">
@@ -54,9 +55,7 @@ include('header.php');
  <div class="why-choose-text">
  <h2><a href="#">Announcements </a></h2>
  <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrolldelay="400" behavior="scroll" height="150px">
- <p><a href="General_rank_list_2021.xlsx">Kindly find the Rank List for 2021-2022</a></p>
- <p><a href="General_rank_list_2021.xlsx">Kindly find the Rank List for 2021-2022</a></p>
- <p><a href="General_rank_list_2021.xlsx">Kindly find the Rank List for 2021-2022</a></p>
+ <p><a href="General_rank_list_2021.xlsx">Rank List for 2021-2022</a></p>
  </marquee>
  </div>
  </div>
@@ -68,22 +67,30 @@ include('header.php');
  </div>
  <div class="why-choose-text">
  <h2><a href="#">Students Corner </a></h2>
- <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrolldelay="200" behavior="scroll">
+ <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrolldelay="400" behavior="scroll" height="150px">
  <p>Result will be Published soon.</p>
  </marquee>
  </div>
  </div>
-
-
  <div class="why-choose-inner">
  <div class="why-choose-thumb">
- <img src="img/why_us_3.jpg" alt="" />
+ <img src="img/why_us_3.jpg" alt="" /> 
  </div>
  <div class="why-choose-text">
- <h2><a href="#">Campus </a></h2>
- <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrolldelay="200" behavior="scroll">
- <p>Admissions for 2021 Batched started now.</p>
+ <h2><a href="#">Events </a></h2>
+ <?php 
+ $Query = $db->prepare("SELECT * FROM events where events_status='A'");
+ $Query->execute();
+ $results = $Query->fetchAll(PDO::FETCH_ASSOC);
+ foreach($results as $result)
+{
+ ?>
+ <marquee onmouseover="stop()" onmouseout="start()" direction="up" scrolldelay="400" behavior="scroll" height="150px">
+ <a href="events.php?eve_id=<?php echo $result['events_id'];?>"><?php echo $result['events_title'];?></a>
  </marquee>
+ <?php 
+ }
+ ?>
  </div>
  </div>
  </div>
