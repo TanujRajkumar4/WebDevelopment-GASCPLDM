@@ -159,7 +159,7 @@ echo "<script>window.location.href = 'index.php';</script>";
 
 <?php    
     include './dbConnect.php';
-	$query = "SELECT * FROM course;";
+	$query = "SELECT * FROM course";
 	$results = $db->query($query);
 	
 	foreach($results as $dept){
