@@ -1,5 +1,7 @@
 <?php
 include("../dbConnect.php");
+include("header.php");
+include('./dbConnect.php');
 
 $Name=addslashes($_POST['Name']);
 $Overview=$_POST['Overview'];
