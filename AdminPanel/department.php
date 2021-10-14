@@ -1,5 +1,5 @@
 <?php 
-include("./header.php");
+// include("./header.php");
 include("header.php");
 include('./dbConnect.php');
 if(!isset($_SESSION['adminuser'])){
