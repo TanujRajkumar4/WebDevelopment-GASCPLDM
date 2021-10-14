@@ -2,6 +2,7 @@
 // include("./header.php");
 include("header.php");
 include('./dbConnect.php');
+
 if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }
@@ -158,7 +159,7 @@ echo "<script>window.location.href = 'index.php';</script>";
 
 <?php    
     include './dbConnect.php';
-	$query = "SELECT * FROM Course;";
+	$query = "SELECT * FROM course;";
 	$results = $db->query($query);
 	
 	foreach($results as $dept){
