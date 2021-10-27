@@ -81,7 +81,7 @@
  </div>
  <div class="contact-info-text">
  <h2>address </h2>
- <span>Californiya , United State </span>
+ <span>Mangalam Road, Palladam 641 664. </span>
  </div>
  </div>
  </div>
