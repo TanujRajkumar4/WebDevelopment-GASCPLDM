@@ -67,7 +67,8 @@
  </div>
  </div>
  <div class="col-md-8 col-sm-12 col-xs-8 menu-center">
-  <a href="index.html"><center style="padding-top: 20px;"><h1>Puratchi Thalaivi Amma Government Arts and Science College, Palladam</h1><h3>(Affiliated to Bharathiar University, Coimbatore)
+ <!-- <a href="index.html"><center style="padding-top: 20px;"><h1>Puratchi Thalaivi Amma Government Arts and Science College, Palladam</h1><h3>(Affiliated to Bharathiar University, Coimbatore) -->
+  <a href="index.html"><center style="padding-top: 20px;"><h1>புரட்சி தலைவி அம்மா அரசு கலை மற்றும் அறிவியல் கல்லூரி, பல்லடம்
 <br>ESTD - 2017
 </h3></center></a>
  </div>
@@ -176,8 +177,8 @@
  <li><a href="#">ECO Club</a></li>
  </ul>
  </li>
- <li><a href="">AICTE </a></li>
- <li><a href="">IQAC </a></li>
+ <!-- <li><a href="">AICTE </a></li>
+ <li><a href="">IQAC </a></li> -->
  <li><a href="./contact.php">Contact </a></li>
  </ul>
  </nav>
