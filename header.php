@@ -143,55 +143,53 @@
                           <li><a href="department.php?dept_ID=1">Department of Tamil </a></li>
                           <li><a href="department.php?dept_ID=2">Department of English</a></li>
                           <li><a href="department.php?dept_ID=3">Department of Mathematics </a></li>
-                          <li><a href="department.php?dept_ID=4">Department of Commerce <i class="fa fa-angle-right"></i> </a>
-                            <ul>
-                              <li><a href="department.php?dept_ID=8">Department of B.Com. (B&I) </a></li>
-                              <li><a href="department.php?dept_ID=9">Department of B.Com. (C.A.) </a></li>
-                            </ul>
-                          </li>
-                          <li><a href="department.php?dept_ID=5">Department of Computer Science</a></li>
-                          <li><a href="department.php?dept_ID=6">Department of Chemistry</a></li>
-                          <li><a href="department.php?dept_ID=7">Department of Costume Design and Fashion</a></li>
-                        </ul>
+                          <li><a href="department.php?dept_ID=4">Department of Commerce </a>
+                          <li><a href="department.php?dept_ID=8">Department of B.Com. (B&I) </a></li>
+                          <li><a href="department.php?dept_ID=9">Department of B.Com. (C.A.) </a></li>
                       </li>
-                      <li><a href="./page.php?page_id=20">Scholarship </a></li>
-                      <li><a href="./page.php?page_id=21">Library</a></li>
-                      <!-- <li><a href="./page.php?page_id=22">Physical Education</a></li> -->
-                      <li><a href="img/calendar/Calender_2021_2022.pdf" target="_blank">Academic Calendar</a></li>
+                      <li><a href="department.php?dept_ID=5">Department of Computer Science</a></li>
+                      <li><a href="department.php?dept_ID=6">Department of Chemistry</a></li>
+                      <li><a href="department.php?dept_ID=7">Department of Costume Design and Fashion</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">
-                      <p1>Admission</p1>
-                    </a>
-                    <ul>
-                      <li><a href=" ">Government Reservation Policy</a></li>
-                      <!-- <li><a href="admission-application.html">Application Form</a></li>
+                  <li><a href="./page.php?page_id=20">Scholarship </a></li>
+                  <li><a href="./page.php?page_id=21">Library</a></li>
+                  <!-- <li><a href="./page.php?page_id=22">Physical Education</a></li> -->
+                  <li><a href="img/calendar/Calender_2021_2022.pdf" target="_blank">Academic Calendar</a></li>
+                </ul>
+                </li>
+                <li><a href="#">
+                    <p1>Admission</p1>
+                  </a>
+                  <ul>
+                    <li><a href=" ">Government Reservation Policy</a></li>
+                    <!-- <li><a href="admission-application.html">Application Form</a></li>
             <li><a href="admission-prospectus.html">Prospectus</a></li>-->
-                      <!--<li><a href="admission-rules.html">Rules of Reservation </a></li>-->
-                      <!--<li><a href="admission-online-application.html">Online Application </a></li>-->
-                      <li><a href=" ">Fee Structure</a></li>
-                      <li><a href=" ">Eligibility Criteria</a></li>
-                      <!--<li><a href="images/home/ug-IIIcounselling.pdf" target="_blank">UG-III Counselling</a></li>-->
-                    </ul>
-                  </li>
-                  <li><a href="./page.php?page_id=24">Facilities </a></li>
-                  <li><a href="#">Examination </a>
-                    <ul>
-                      <li><a href="./page.php?page_id=27">Results</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Activities </a>
-                    <!--ul>
+                    <!--<li><a href="admission-rules.html">Rules of Reservation </a></li>-->
+                    <!--<li><a href="admission-online-application.html">Online Application </a></li>-->
+                    <li><a href=" ">Fee Structure</a></li>
+                    <li><a href=" ">Eligibility Criteria</a></li>
+                    <!--<li><a href="images/home/ug-IIIcounselling.pdf" target="_blank">UG-III Counselling</a></li>-->
+                  </ul>
+                </li>
+                <li><a href="./page.php?page_id=24">Facilities </a></li>
+                <li><a href="#">Examination </a>
+                  <ul>
+                    <li><a href="./page.php?page_id=27">Results</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Activities </a>
+                  <!--ul>
  <li><a href="#">NCC </a></li>
  <li><a href="#">NSS</a></li>
  <li><a href="#">YRC</a></li>
  <li><a href="#">RRC</a></li>
  <li><a href="#">ECO Club</a></li>
  </ul-->
-                  </li>
-                  <!-- <li><a href="">AICTE </a></li>
+                </li>
+                <!-- <li><a href="">AICTE </a></li>
  <li><a href="">IQAC </a></li> -->
-                  <li><a href="./contact.php">Contact </a></li>
+                <li><a href="./contact.php">Contact </a></li>
                 </ul>
               </nav>
             </div>
