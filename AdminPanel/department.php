@@ -170,7 +170,7 @@ echo "<script>window.location.href = 'index.php';</script>";
 								<td><?php echo $dept['Dept_Name'];?></td>
 							   <td><?php echo $dept['Dept_OverView'];?></td>
 							   <td><?php echo $dept['Dept_Description'];?></td>
-							   <td><img src="../../<?php echo $dept['dept_img'];?>"></td>
+							   <td><img src="<?php echo $dept['dept_img'];?>" height="150px" width="150px"></td>
                               <td><a href="departmentedit.php?id=<?php echo $dept['Dept_ID'];?>">Edit</a>
 								<a href="departmentdelete.php?id=<?php echo $dept['Dept_ID']; ?>" onclick="return myFunction()">Delete</a>
 								</td>
