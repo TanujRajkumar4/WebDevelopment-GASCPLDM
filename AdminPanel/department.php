@@ -1,7 +1,5 @@
 <?php 
-// include("./header.php");
-include("header.php");
-include('./dbConnect.php');
+include("./header.php");
 if(!isset($_SESSION['adminuser'])){
 echo "<script>window.location.href = 'index.php';</script>";	
 }
@@ -82,6 +80,15 @@ echo "<script>window.location.href = 'index.php';</script>";
 											<textarea rows="5"  cols="80" name="Description" style="width:100%" value=""  required></textarea>
 										</div>
 									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Banner Image <span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<input type="file" name="bg_img">
+										</div>
+									</div>
 									
 									 
                         </div>
@@ -142,6 +149,10 @@ echo "<script>window.location.href = 'index.php';</script>";
 								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 300px;">
 									 Department Description
 								</th>
+								
+								<th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 300px;">
+									 Banner Image
+								</th>
 
 							</tr>
 							</thead>
@@ -159,6 +170,7 @@ echo "<script>window.location.href = 'index.php';</script>";
 								<td><?php echo $dept['Dept_Name'];?></td>
 							   <td><?php echo $dept['Dept_OverView'];?></td>
 							   <td><?php echo $dept['Dept_Description'];?></td>
+							   <td><?php echo $dept['dept_img'];?></td>
                               <td><a href="departmentedit.php?id=<?php echo $dept['Dept_ID'];?>">Edit</a>
 								<a href="departmentdelete.php?id=<?php echo $dept['Dept_ID']; ?>" onclick="return myFunction()">Delete</a>
 								</td>
