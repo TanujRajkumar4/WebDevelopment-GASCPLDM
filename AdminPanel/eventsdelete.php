@@ -18,7 +18,7 @@ catch(Exception $e){
 }
 if($result)
 {
-    echo "<script>alert('Department Deleted Successfully');
+    echo "<script>alert('Event Deleted Successfully');
     window.location.href = 'events.php';</script>";
 }
 
