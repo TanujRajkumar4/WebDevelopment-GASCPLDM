@@ -168,7 +168,7 @@ echo "<script>window.location.href = 'index.php';</script>";
     $results = $db->query($query);
     $i=1;
 	foreach($results as $dept){
-		$gal=$dept['events_id'];
+		$gal=$dept['events_photo'];
 		$pro_img=explode('..',$gal);
 ?>
 								
