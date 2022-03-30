@@ -168,15 +168,16 @@ echo "<script>window.location.href = 'index.php';</script>";
     $results = $db->query($query);
     $i=1;
 	foreach($results as $dept){
-?>                            
-									 $pro_img=explode('../',$dept['events_id']);
+?>
+								$gal=$dept['events_id'];
+								 $pro_img=explode('../',$gal);
 							<tr role="row" class="odd">
 								<td class="sorting_1"><?php echo $i;?></td>
 								<td><?php echo $dept['events_title'];?></td>
                                <td><?php $date_yy=date("d-m-Y",strtotime($dept['events_date'])); echo $date_yy;?></td>
 							   <td><?php echo $dept['events_desc'];?></td>
                                <td><img src="<?php echo $dept['events_photo'];?>" height="150px" width="150px"></td>
-                              <td><a href="eventsedit.php?id=<?php echo $pro_img[1];?>">Edit</a>
+                              <td><a href="eventsedit.php?id=<?php echo $pro_img[0];?>">Edit</a>
 								<a href="eventsdelete.php?id=<?php echo $dept['events_id']; ?>" onclick="return myFunction()">Delete</a>
 								</td>
 							</tr>
