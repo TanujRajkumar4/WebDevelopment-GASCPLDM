@@ -169,7 +169,7 @@ echo "<script>window.location.href = 'index.php';</script>";
     $i=1;
 	foreach($results as $dept){
 		$gal=$dept['events_id'];
-		$pro_img=explode('../',$gal);
+		$pro_img=explode('..',$gal);
 ?>
 								
 							<tr role="row" class="odd">
@@ -177,7 +177,7 @@ echo "<script>window.location.href = 'index.php';</script>";
 								<td><?php echo $dept['events_title'];?></td>
                                <td><?php $date_yy=date("d-m-Y",strtotime($dept['events_date'])); echo $date_yy;?></td>
 							   <td><?php echo $dept['events_desc'];?></td>
-                               <td><img src="<?php echo $pro_img[0];?>" height="150px" width="150px"></td>
+                               <td><img src="<?php echo $pro_img[1];?>" height="150px" width="150px"></td>
                               <td><a href="eventsedit.php?id=<?php echo $dept['events_id'];?>">Edit</a>
 								<a href="eventsdelete.php?id=<?php echo $dept['events_id']; ?>" onclick="return myFunction()">Delete</a>
 								</td>
